@@ -59,8 +59,16 @@ int Span::shortestSpan(void) const
 {
 	if (this->index < 2)
 		throw Span::PochiElementi();
-	std::sort(this->array.begin(), this->array.begin() + this->index);
-	return(0);
+	unsigned int min = 4294967295;
+	std::vector<int> temp = this->array;
+	std::sort(temp.begin(), temp.end());
+	for (unsigned int i = 0; i < this->index - 1; i++)
+	{
+		unsigned int distanza = std::abs(temp[i + 1] - temp[i]);
+		if (distanza < min)
+			min = distanza;
+	}
+	return min;
 }
 
 int Span::longestSpan(void) const
