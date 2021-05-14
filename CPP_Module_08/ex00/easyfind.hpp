@@ -1,5 +1,6 @@
 #pragma once
-# include <exception>
+#include <exception>
+#include <algorithm>
 
 class ElementoNonTrovato: public std::exception
 {
@@ -12,12 +13,8 @@ class ElementoNonTrovato: public std::exception
 
 template <typename T> void easyfind (T &data, int n)
 {
-	typename T::iterator i;
-	for (i = data.begin(); i != data.end(); i++)
-		if (*i == n)
-		{
-			std::cout << "Elemento trovato" << std::endl;
-			return ;
-		}
-	throw ElementoNonTrovato();
+	if (std::find(data.begin(), data.end(), n) != data.end())
+		std::cout << "Elemento trovato" << std::endl;
+	else
+		throw ElementoNonTrovato();
 }
