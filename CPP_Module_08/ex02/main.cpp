@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/15 10:40:03 by dmalori           #+#    #+#             */
+/*   Updated: 2021/05/15 11:00:38 by dmalori          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include "mutantstack.hpp"
 #include <list>
 
 int main (void)
 {
+	std::cout << "*** MAIN SUBJECT" << std::endl;
 	MutantStack<int> mstack;
 	mstack.push(5);
 	mstack.push(17);
@@ -21,16 +34,19 @@ int main (void)
 	--it;
 	while (it != ite)
 	{
-	std::cout << *it << std::endl;
-	++it;
+		std::cout << *it << std::endl;
+		++it;
 	}
 	std::stack<int> s(mstack);
 	std::cout << s.size() << std::endl;
 
+	std::cout << "*** TEST ITERATORI" << std::endl;
 	MutantStack<int> m;
 	m.push(10);
 	m.push(50);
 	m.push(123);
+	m.push(85);
+	m.push(9);
 
 	/* AVANTI */
 	for (MutantStack<int>::iterator i = m.begin(); i != m.end(); i++)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mutantstack.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/15 10:40:08 by dmalori           #+#    #+#             */
+/*   Updated: 2021/05/15 10:41:53 by dmalori          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #include <stack>
 #include <deque>
@@ -17,7 +29,7 @@ template <typename T, typename Container = std::deque<T> > class MutantStack : p
 			if (this != &other) {
 				std::stack<T, Container>::operator=(other);
 			}
-			return *this;
+			return (*this);
 		}
 		/* Other */
 		typedef typename std::stack<T, Container>::container_type container_type;

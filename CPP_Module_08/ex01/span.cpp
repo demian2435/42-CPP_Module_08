@@ -1,15 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   span.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/15 10:39:57 by dmalori           #+#    #+#             */
+/*   Updated: 2021/05/15 10:54:34 by dmalori          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "span.hpp"
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
 #include <algorithm>
 #include <vector>
-
-/*
-int N;
-int *array;
-int index;
-*/
 
 Span::Span(unsigned int _N)
 {
@@ -83,7 +89,7 @@ int Span::longestSpan(void) const
 void Span::stampa(void) const
 {
 	if (this->index == 0)
-		std::cout << "Array vuoto";
+		std::cout << "Array: [ ]";
 	else
 	{
 		std::cout << "Array: [";

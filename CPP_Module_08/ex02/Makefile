@@ -6,7 +6,7 @@
 #    By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/23 11:15:19 by dmalori           #+#    #+#              #
-#    Updated: 2021/05/13 13:05:46 by dmalori          ###   ########.fr        #
+#    Updated: 2021/05/15 10:55:35 by dmalori          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ On_ICyan	=	'\033[0;106m'	# Cyan
 On_IWhite	=	'\033[0;107m'	# White
 
 NAME		=	ex02
-SRC			=	mutantstack.cpp main.cpp
+SRC			=	main.cpp
 CC			=	clang++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 
